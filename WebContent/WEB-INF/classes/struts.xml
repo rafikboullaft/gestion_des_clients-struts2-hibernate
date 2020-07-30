@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">  
+<struts>  
+<package name="default" extends="hibernate-default">  
+  
+<action name="addClient" method="add" class="com.clients.controller.ClientController">  
+	<result name="success"  type="redirect">listClient.action</result>  
+</action>
+<action name="listClient" method="list" class="com.clients.controller.ClientController">  
+	<result name="success">/WEB-INF/register.jsp</result>
+</action>
+<action name="editClient" method="edit" class="com.clients.controller.ClientController">
+	<result name="success">/WEB-INF/register.jsp</result>
+</action>
+<action name="deleteClient" method="delete" class="com.clients.controller.ClientController">
+	<result name="success" type="redirect">listClient.action</result>
+</action>
+
+
+
+</package>  
+</struts> 
